@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+</head>
+<body>
+<h1>Регистрация</h1>
+<form action="/register" method="POST">
+    <input type="text" name="name" placeholder="Имя пользователя" required>
+    <input type="email" name="email" placeholder="Почта" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <label for="role">Роль:</label>
+    <select name="role" id="role" required>
+        <option value="" disabled selected>Выберите роль</option>
+        <option value="manager">Менеджер</option>
+        <option value="team_lead">Тим лид</option>
+        <option value="developer">Разработчик</option>
+    </select>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+
+<p>Уже есть аккаунт? <a href="/login">Войти</a></p>
+
+</body>
+</html>
