@@ -26,7 +26,7 @@ module.exports = (sequelize) => {
 
     Project.associate = (models) => {
         Project.belongsToMany(models.User, {
-            through: 'ProjectMembers', // Указываем точное имя таблицы
+            through: 'ProjectMembers',
             foreignKey: 'project_id',
             otherKey: 'user_id'
         });

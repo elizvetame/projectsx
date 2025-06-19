@@ -8,6 +8,6 @@ module.exports = function checkRole( req, res, next, ...roles) {
             next();
         } else {
             res.status(409).json({error: "Нет прав доступа"});
-            res.redirect("/");
+
         }
     }};

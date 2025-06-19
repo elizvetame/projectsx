@@ -3,6 +3,6 @@ module.exports = function auth(req, res, next) {
         next();
     } else {
         res.status(401).json({ error: "Не авторизован" });
-        res.redirect("/login");
+
     }
 };
