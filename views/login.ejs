@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <!-- Только один скрипт SDK -->
+    <script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-with-polyfills-latest.js"></script>
+    <style>
+        #buttonContainerId {
+            width: 200px;
+            height: 40px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Вход</h1>
+
+
+
+<form action="/login" method="POST">
+    <input type="text" name="email" placeholder="почта" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <input type="submit" value="Войти">
+</form>
+
+<p>Нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
+
+</body>
+</html>

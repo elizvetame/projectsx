@@ -11,9 +11,9 @@ const sequelize = new Sequelize(
         dialect: 'postgres'});
 
 
-const User = require('./models/User')(sequelize, DataTypes);
-const Project = require('./models/Project')(sequelize, DataTypes);
-const Task = require('./models/Task')(sequelize, DataTypes);
+const User = require('../db/models/User')(sequelize, DataTypes);
+const Project = require('../db/models/Project')(sequelize, DataTypes);
+const Task = require('../db/models/Task')(sequelize, DataTypes);
 
 
 module.exports = {
