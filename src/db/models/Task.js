@@ -19,13 +19,28 @@ module.exports = (sequelize) => {
         status: {
             type: DataTypes.ENUM('todo', 'in_progress', 'done'),
             defaultValue: 'todo'
+        },
+        project_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'projects',
+                    key: 'id'
+                }
+        },
+       assignee_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'users',
+                    key: 'id'
+                }
         }
     });
 
     Task.associate = (models) => {
-        Task.belongsTo(models.Project);
-        Task.belongsTo(models.User, { as: 'assignee' });
+        Task.belongsTo(models.Project, { foreignKey: 'project_id' });
+        Task.belongsTo(models.User, { foreignKey: 'assignee_id' });
     };
+
 
     return Task;
 };

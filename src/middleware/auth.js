@@ -2,7 +2,7 @@ module.exports = function auth(req, res, next) {
     if (req.user) {
         next();
     } else {
-        req.flash("error", "Пожалуйста, войдите в систему.");
+        res.status(401).json({ error: "Не авторизован" });
         res.redirect("/login");
     }
 };

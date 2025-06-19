@@ -14,11 +14,22 @@ module.exports = (sequelize) => {
         },
         description: {
             type: DataTypes.TEXT
+        },
+        created_by: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'users',
+                    key: 'id'
+                }
         }
     });
 
     Project.associate = (models) => {
-        Project.belongsToMany(models.User, { through: 'ProjectMembers' });
+        Project.belongsToMany(models.User, {
+            through: 'ProjectMembers', // Указываем точное имя таблицы
+            foreignKey: 'project_id',
+            otherKey: 'user_id'
+        });
         Project.hasMany(models.Task);
     };
 

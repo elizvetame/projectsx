@@ -16,11 +16,11 @@ passport.use(new LocalStrategy({
             console.log(user);
             if (user !== null) {
                 if (await bcrypt.compare(password,user.password)) {
-                    cb(null, {email: user.email, role: user.role, name: user.name});
+                    cb(null, {id: user.id, email: user.email, role: user.role, name: user.name});
+
                 } else {
-                    console.log('Не верный email or password.');
                     cb(null, false, {message: 'Не верный email or password.'});
-                    console.log('Не верный email or password.');
+
                 }
             }
 
@@ -33,7 +33,7 @@ passport.use(new LocalStrategy({
 
 passport.serializeUser(function(user, cb) {
     process.nextTick(function() {
-        cb(null, { email: user.email,  role: user.role, name: user.name });
+        cb(null, { id: user. id, email: user.email,  role: user.role, name: user.name });
     });
 });
 
