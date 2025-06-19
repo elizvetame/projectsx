@@ -1,20 +1,4 @@
-projectsx/
-├── .idea/                  # WebStorm configuration 
-├── node_modules/           # Node.js зависимости
-├── sessions/               # хранилище сессий
-├── src/                    
-│   ├── config/             # файлы конфигурации бд сессии паспорт
-│   ├── db/                 #бд
-│   │   ├── models/         # модели бд
-│   ├               
-│   ├── middleware/         # Middleware функции
-│   ├── routes/             # API routes
-│   └── views/              # Static views or templates
-├── .env                    # Environment variables
-├── docker-compose.yml      # Docker Compose configuration
-├── Dockerfile              # Docker build instructions
-├── index.js                # Entry point of the application
-├── nginx.conf              # Nginx configuration
+![{C6FD507A-E17D-47FC-865A-1FDFE50AF1E0}](https://github.com/user-attachments/assets/c9b0bc8c-44d6-49d8-a3d5-f53a46743f0d)
 
 
 
